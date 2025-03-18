@@ -1,0 +1,73 @@
+@use "./global/mixins.scss" as m;
+@use "./global/variables.scss" as v;
+
+footer {
+  background-color: v.$primary-color;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  .footer-container {
+    width: 80%;
+    margin: auto;
+    @include m.forSize(desktop) {
+      width: 100%;
+    }
+    .top-footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include m.forSize(desktop) {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+      }
+      section {
+        width: 300px;
+        h3 {
+          color: v.$secondary-color;
+          font-size: v.$font-size-undertitle;
+        }
+        .day {
+          width: 200px;
+          display: flex;
+          justify-content: space-between;
+        }
+        p {
+          font-size: v.$font-size-base;
+          color: v.$secondary-text-color;
+          margin: 2.5px;
+        }
+        .img-container {
+          width: 200px;
+        }
+        img {
+          width: 280px;
+
+          @include m.forSize(desktop) {
+            width: 280px;
+          }
+        }
+      }
+    }
+
+    .bottom-footer {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      section {
+        color: v.$secondary-text-color;
+        div {
+          display: flex;
+          justify-content: space-around;
+        }
+        p {
+          font-size: 0.8rem;
+          color: v.$secondary-color;
+          text-align: center;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

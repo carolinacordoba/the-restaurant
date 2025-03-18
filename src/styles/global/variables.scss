@@ -1,0 +1,26 @@
+// Main Färger
+$primary-color: #ba274a;
+$secondary-color: #fff057;
+
+// Text Färg
+$primary-text-color: black;
+$alt-prim-text-color: $primary-color;
+$alt-sec-text-color: $secondary-color;
+$secondary-text-color: white;
+
+// Fonts
+$font-primary: "Montserrat", sans-serif;
+
+// Font Weights
+$font-light: 300;
+$font-regular: 400;
+$font-semibold: 600;
+$font-bold: 700;
+
+//Font storlekar
+$font-size-base: 1rem;
+$font-size-undertitle: 1.5rem;
+$font-size-title: 2rem;
+
+$desktop: 1000px;
+$tablet: 768px;

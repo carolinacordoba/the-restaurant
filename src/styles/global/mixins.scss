@@ -1,0 +1,46 @@
+@use "./variables.scss" as v;
+
+@mixin flex($d: row, $j: flex-start, $a: stretch) {
+  display: flex;
+  flex-direction: $d;
+  justify-content: $j;
+  align-items: $a;
+}
+
+// @include m.flex(); får man row, flex-start, stretch vilket är default
+
+// @include m.flex(column); ändrar bara flex direction
+
+// @include m.flex(column, center); center ändrar justify content
+
+// @include m.flex(column, center, center); andra center ändrar align items
+
+// @include m.flex($j: center); ändrar bara justify-content eller @include m.flex($a: center); ändrar bara align-items
+
+@mixin button($w, $bc: v.$primary-color, $tc: v.$alt-sec-text-color) {
+  width: $w;
+  background-color: $bc;
+  color: $tc;
+  height: 50px;
+  border-radius: 3px;
+  border: none;
+  font-size: v.$font-size-undertitle;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+// @include m.forSize(desktop) { } i koden
+
+@mixin forSize($size) {
+  @if $size == desktop {
+    @media screen and (min-width: v.$desktop) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media screen and (min-width: v.$tablet) {
+      @content;
+    }
+  }
+}

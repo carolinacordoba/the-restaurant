@@ -1,0 +1,95 @@
+@use "./global/mixins.scss" as m;
+@use "./global/variables.scss" as v;
+
+.contact-page {
+  @include m.flex(column, center, center);
+  img {
+    filter: brightness(0.6);
+    object-fit: cover;
+    width: 100%;
+    height: 150vh;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    @include m.forSize(desktop) {
+      height: 150vh;
+    }
+  }
+
+  @include m.forSize(desktop) {
+    @include m.flex(row, space-evenly, flex-start);
+    height: 100vh;
+  }
+
+  .contact-page-form {
+    @include m.flex(column, center, center);
+    padding: 16px;
+    padding-bottom: 0px;
+    padding-top: 0;
+    margin-top: 300px;
+  }
+
+  h3 {
+    color: v.$alt-sec-text-color;
+    margin-top: 0;
+    font-size: v.$font-size-undertitle;
+  }
+
+  form {
+    width: 100%;
+    max-width: 400px;
+
+    input,
+    textarea {
+      margin: 0.5rem;
+      padding: 8px;
+      border-radius: 6px;
+      resize: none;
+      border: 1px solid black;
+      opacity: 0.7;
+      width: 90%;
+      max-width: 400px;
+
+      &::placeholder {
+        opacity: 0.65;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+
+    .button-div {
+      margin: calc(0.5rem + 8px);
+      button {
+        @include m.button(100%);
+        font-size: v.$font-size-base;
+        height: 40px;
+        border: none;
+        max-width: 400px;
+      }
+    }
+  }
+
+  .contact-page-text {
+    @include m.flex(column);
+    width: 85%;
+    max-width: 360px;
+    margin: 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    @include m.forSize(desktop) {
+      padding-bottom: 0;
+      margin-top: 316px;
+      margin-left: 7.5rem;
+    }
+
+    h4 {
+      color: v.$alt-sec-text-color;
+    }
+
+    p {
+      color: white;
+      margin: 0px;
+    }
+  }
+}

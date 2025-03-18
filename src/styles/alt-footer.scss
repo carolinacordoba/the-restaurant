@@ -1,0 +1,27 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+body {
+  margin: 0;
+}
+
+.alt-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  @include m.flex($j: center, $a: center);
+  background-color: v.$primary-color;
+  height: 10vh;
+
+  @include m.forSize(desktop) {
+    flex: 1;
+  }
+  p {
+    font-family: v.$font-primary;
+    font-size: 0.7rem;
+    font-weight: v.$font-bold;
+
+    color: v.$secondary-color;
+  }
+}

@@ -1,0 +1,37 @@
+@use "./global/mixins.scss" as m;
+@use "./global/variables.scss" as v;
+
+.booking-confirmation {
+    @include m.flex(column, space-around, center);
+    height: 70%;
+    width: 100%;
+
+
+    .top {
+        @include m.flex(column, flex-start, center);
+    }
+
+    h3 {
+        color: v.$alt-prim-text-color;
+    }
+
+    h4 {
+        color: v.$alt-prim-text-color;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    button {
+        @include m.button(160px);
+        font-size: 1.1rem;
+        height: 35px;
+        a {
+            text-decoration: none;
+            color: v.$alt-sec-text-color;
+        }
+    }
+}

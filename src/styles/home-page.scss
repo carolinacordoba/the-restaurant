@@ -1,0 +1,39 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+body {
+  margin: 0;
+}
+
+.hero {
+  @include m.flex($j: center, $a: center);
+
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    filter: brightness(0.6);
+  }
+}
+
+.book-table-btn {
+  @include m.button(200px, white, v.$primary-text-color);
+
+  position: relative;
+  z-index: 2;
+
+  font-family: v.$font-primary;
+
+  @include m.forSize(desktop) {
+    bottom: -10vh;
+  }
+}

@@ -1,0 +1,84 @@
+@use "./global/mixins.scss" as m;
+@use "./global/variables.scss" as v;
+
+body {
+  margin: 0;
+}
+
+.menu {
+  color: v.$primary-text-color;
+  background-color: v.$primary-color;
+  @include m.flex(column, center, center);
+
+  &__cat__container {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    margin-top: 350px;
+    margin-bottom: 30px;
+    @include m.forSize(desktop) {
+      @include m.flex(row, center);
+      max-width: 1300px;
+    }
+    .menu_banner {
+      img {
+        min-width: 320px;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        @include m.forSize(desktop) {
+          max-width: 375px;
+        }
+      }
+    }
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include m.forSize(desktop) {
+      @include m.flex(row);
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 1000px;
+    }
+  }
+  &__category {
+    width: 80%;
+    max-width: 400px;
+    @include m.forSize(desktop) {
+      min-width: 320px;
+      margin-left: 20px;
+      width: 45%;
+      border-radius: 5px;
+    }
+    &__title {
+      font-size: v.$font-size-undertitle;
+      color: v.$alt-prim-text-color;
+    }
+    &__item {
+      @include m.flex(row, space-between, center);
+      width: 100%;
+      &__left {
+        width: 60%;
+        &__title {
+          font-size: v.$font-size-base;
+          width: 100%;
+        }
+        &__desc {
+          font-size: 0.7rem;
+          width: 100%;
+        }
+      }
+      &__price {
+        text-align: end;
+        font-size: 0.8rem;
+        width: 20%;
+      }
+    }
+  }
+}
