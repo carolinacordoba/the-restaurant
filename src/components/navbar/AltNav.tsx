@@ -1,8 +1,6 @@
-import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import "../../styles/alt-nav.scss";
 import { Link } from "react-router-dom";
-import BookingPage from "../../pages/BookingPage";
 
 interface AltNavProps {
   handleBackPageNumber: () => void;
