@@ -17,7 +17,7 @@ const MenuPage = () => {
             ))}
           </div>
           <div className="menu_banner">
-            <img src="/public/El Menú.png" alt="menu-banner" />
+            <img src="/El Menú.png" alt="menu-banner" />
           </div>
         </div>
       </div>

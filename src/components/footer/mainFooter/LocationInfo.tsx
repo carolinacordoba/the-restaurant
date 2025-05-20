@@ -8,7 +8,7 @@ const LocationInfo = () => {
         <p>Stockholm</p>
       </div>
       <div className="img-container">
-        <img src="/public/maps.png" alt="googlemaps" />
+        <img src="/maps.png" alt="googlemaps" />
       </div>
     </section>
   );
