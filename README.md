@@ -1,51 +1,42 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ALNpjooM)
-# React + TypeScript + Vite
+# The Restaurant – Dos CaMatheo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img width="1465" alt="doscamatheo" src="https://github.com/user-attachments/assets/a805f999-f5d5-4bde-8fd6-04f87830490e" />
 
-Currently, two official plugins are available:
+## 📝 Beskrivning
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Detta projekt är en React-applikation byggd med TypeScript och Vite, avsedd som en modern och snabb webbapp-mall för restaurangrelaterade projekt. Den har stöd för Hot Module Replacement (HMR) och är förberedd med ESLint för att säkerställa kodkvalitet.
 
-## Expanding the ESLint configuration
+## 🎯 Mål
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Minimal och snabb React-setup med Vite
+- Typkontrollerad kod med TypeScript
+- Hot Module Replacement för snabb utveckling
+- ESLint-konfiguration med React-specifika regler
 
-- Configure the top-level `parserOptions` property like this:
+## 🧱 Tekniker
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- React 18
+- TypeScript
+- Vite
+- ESLint med `eslint-plugin-react`
+- Babel eller SWC för snabb refresh (valbart via Vite-plugins)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## ▶️ Hur man kör projektet
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Klona eller ladda ner repot
+2. Öppna terminalen i projektmappen
+3. Kör `npm install` för att installera beroenden
+4. Kör `npm run dev` för att starta utvecklingsservern med HMR
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## ⚙️ ESLint-konfiguration
+
+- Projektet använder en utökad ESLint-konfiguration som är type-aware
+- `parserOptions` är konfigurerade med `tsconfig.node.json` och `tsconfig.app.json`
+- React-specifika regler hanteras via `eslint-plugin-react`
+- Två officiella Vite-plugins för React finns tillgängliga:
+  - `@vitejs/plugin-react` (Babel-baserad)
+  - `@vitejs/plugin-react-swc` (SWC-baserad)
+
+## 📄 Licens
+
+Detta är ett projektmall och licensieras inte för kommersiellt bruk utan tillstånd.
